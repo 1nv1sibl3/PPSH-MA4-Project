@@ -6,9 +6,11 @@ Art Integration - Maharashtra & Sikkim
 
 # Main Routes:
  - /home/
- - /home#navigation
+ - /home?#navigation
  - /credits/
  - /comparison/
 
 # Upcoming Topics:
  - ||TO BE DECIDED||
+
+# Team Info - ```Check on website when done xD```
