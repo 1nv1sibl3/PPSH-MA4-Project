@@ -28,12 +28,6 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="carousel">
-            <!-- Add carousel images here with appropriate image sources -->
-            <img src="{{ url_for('static', filename='images/school_logo_latest.png') }}" alt="Carousel Image 1">
-            <img src="{{ url_for('static', filename='images/school_logo_old_name.jpg') }}" alt="Carousel Image 2">
-            <img src="{{ url_for('static', filename='images/school_logo_purple.jpg') }}" alt="Carousel Image 3">
-        </div>
         <div class="overlay"></div> <!-- Semi-transparent overlay -->
         <div class="container">
             <h2>Explore the Art and Culture of Maharashtra and Sikkim</h2>
@@ -50,31 +44,7 @@
         </div>
     </footer>
 
-    <!-- Script to enable carousel functionality -->
-    <script>
-        // JavaScript for the Carousel
-        const carouselImages = document.querySelectorAll('.carousel img');
-        let currentImageIndex = 0;
 
-        function showImage(index) {
-            carouselImages.forEach(image => {
-                image.style.display = 'none';
-            });
-            carouselImages[index].style.display = 'block';
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-            showImage(currentImageIndex);
-        }
-
-        function startCarousel() {
-            showImage(currentImageIndex);
-            setInterval(nextImage, 3000); // Change image every 3 seconds (adjust as desired)
-        }
-
-        startCarousel();
-    </script>
 </body>
 
 </html>
