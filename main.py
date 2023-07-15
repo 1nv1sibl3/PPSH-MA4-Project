@@ -7,8 +7,8 @@ from flask import *
 app = Flask("Art-Integration-MA4")
 
 # Define path ways
-app.static_folder = "./static/"
-app.template_folder = "./templates/"
+app.static_folder = "./static"
+app.template_folder = "./templates"
 
 # Routes
 @app.route("/")
@@ -18,7 +18,7 @@ def home():
 
 # Run webserver
 def run_webserver():
-    app.run(debug=True, port=5002)
+    app.run(debug=True, port=5004)
 
 if __name__ == "__main__":
     run_webserver()

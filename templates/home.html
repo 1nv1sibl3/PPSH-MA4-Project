@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/home.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistic Harmony - Maharashtra & Sikkim</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+    <!-- Fonts from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1>Home</h1>
-                <p>Welkom op de homepagina van de website van de PPSH-MA4-Project.</p>
-                <p>Deze website is gemaakt voor het project van de PPSH-MA4-Project.</p>
 
-            </div>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Artistic Harmony</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Maharashtra</a></li>
+                    <li><a href="#">Sikkim</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="carousel">
+            <!-- Add carousel images here with appropriate image sources -->
+            <img src="{{ url_for('static', filename='images/school_logo_latest.png') }}" alt="Carousel Image 1">
+            <img src="{{ url_for('static', filename='images/school_logo_old_name.jpg') }}" alt="Carousel Image 2">
+            <img src="{{ url_for('static', filename='images/school_logo_purple.jpg') }}" alt="Carousel Image 3">
+        </div>
+        <div class="overlay"></div> <!-- Semi-transparent overlay -->
+        <div class="container">
+            <h2>Explore the Art and Culture of Maharashtra and Sikkim</h2>
+        </div>
+    </section>
+
+    <!-- More sections and content can be added here -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Artistic Harmony | Contact: contact@example.com</p>
+            <!-- Add social media icons if desired -->
+        </div>
+    </footer>
+
+    <!-- Script to enable carousel functionality -->
+    <script>
+        // JavaScript for the Carousel
+        const carouselImages = document.querySelectorAll('.carousel img');
+        let currentImageIndex = 0;
+
+        function showImage(index) {
+            carouselImages.forEach(image => {
+                image.style.display = 'none';
+            });
+            carouselImages[index].style.display = 'block';
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+            showImage(currentImageIndex);
+        }
+
+        function startCarousel() {
+            showImage(currentImageIndex);
+            setInterval(nextImage, 3000); // Change image every 3 seconds (adjust as desired)
+        }
+
+        startCarousel();
+    </script>
 </body>
+
 </html>
