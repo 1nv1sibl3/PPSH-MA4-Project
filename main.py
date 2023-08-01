@@ -13,7 +13,7 @@ app.template_folder = "./templates"
 # Routes
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("index.html")
 
 
 # Run webserver
