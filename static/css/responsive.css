@@ -295,11 +295,11 @@
 	}
 	
 	.header-area .header-content h1 {
-		font-size: 40px;
+		font-size: 100px;
 	}
 	
 	.header-area .header-content p {
-		font-size: 14px;
+		font-size: 70px;
 	}
 	
 	.header-area .play-icon {
@@ -645,3 +645,9 @@
 		font-size: 11px;
 	}
 }
+
+@media (max-width: 768px) {
+	.navigator-section .container {
+	  height: auto; /* Allow the section to adjust its height based on content on mobile devices */
+	}
+  }

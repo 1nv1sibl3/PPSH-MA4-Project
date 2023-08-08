@@ -530,3 +530,68 @@ body {
 .footer-area .copyright a:hover{
     color: #2f5c5a;
 }
+
+/* NAVIGATOR SECTION START */
+
+/* Styles specifically for the Navigator section */
+/* Styles specifically for the Navigator section */
+.navigator-section .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 160vh;
+  }
+  
+  .navigator-section .section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+  }
+  
+  .navigator-section .left,
+  .navigator-section .right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end; /* Adjust this to adjust vertical alignment */
+	align-items: center;
+	position: relative;
+  }
+  
+  .navigator-section .left img,
+  .navigator-section .right img {
+	width: 900px; /* Set your desired width */
+	height: 700px; /* Set your desired height */
+	object-fit: cover;
+  }
+  
+  .navigator-section .link-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: calc(50% - 10px); /* Adjust this value to align links vertically */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(240, 240, 240, 0.8);
+	border-radius: 5px;
+	padding: 10px;
+  }
+  
+  .navigator-section .link {
+	text-align: center;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	margin: 5px 0;
+	transition: background-color 0.3s ease;
+  }
+  
+  .navigator-section .link:hover {
+	background-color: #d0d0d0;
+  }
+  
+  
