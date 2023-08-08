@@ -153,8 +153,8 @@ body {
 
 .header-area .header-content h1{
     color: #FFF;
-    font-size: 55px;
-    font-weight: 100;
+    font-size: 100px;
+    font-weight: 600;
     margin: 0;
     margin-bottom: 20px;
 }
@@ -167,8 +167,8 @@ body {
 .header-area .header-content p{
     font-style: italic;
     color: #d0e7e9;
-    font-size: 17px;
-    font-weight: 300;
+    font-size: 60px;
+    font-weight: 350;
 	margin: 0;
 }
 
@@ -213,8 +213,8 @@ body {
 }
 
 .contend-area .download-section h1{
-	font-weight: 100;
-	font-size: 55px;
+	font-weight: 800;
+	font-size: 150px;
 	line-height: 1.1;
 	margin: 0;
 	font-weight: 100;
@@ -225,7 +225,9 @@ body {
 }
 
 .contend-area .download-section p {
-	font-weight: 300;
+	text-align: justify;
+	font-size: medium;
+	font-weight: 450;
 	margin-top: 50px;
 	line-height: 1.7;
 }
@@ -534,7 +536,6 @@ body {
 /* NAVIGATOR SECTION START */
 
 /* Styles specifically for the Navigator section */
-/* Styles specifically for the Navigator section */
 .navigator-section .container {
 	display: flex;
 	flex-direction: column;
@@ -547,7 +548,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start; /* Align items at the start of the flex container */
 	width: 100%;
   }
   
@@ -556,9 +557,7 @@ body {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end; /* Adjust this to adjust vertical alignment */
 	align-items: center;
-	position: relative;
   }
   
   .navigator-section .left img,
@@ -566,19 +565,19 @@ body {
 	width: 900px; /* Set your desired width */
 	height: 700px; /* Set your desired height */
 	object-fit: cover;
+	max-width: 100%; /* Ensure images don't exceed their container */
+	height: auto;
   }
   
   .navigator-section .link-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: absolute;
-	top: calc(50% - 10px); /* Adjust this value to align links vertically */
-	left: 50%;
-	transform: translate(-50%, -50%);
 	background-color: rgba(240, 240, 240, 0.8);
 	border-radius: 5px;
 	padding: 10px;
+	margin-top: 20px; /* Add margin to separate links from images */
+	width: 100%; /* Make the link container full width */
   }
   
   .navigator-section .link {
@@ -594,4 +593,4 @@ body {
 	background-color: #d0d0d0;
   }
   
-  
+	
