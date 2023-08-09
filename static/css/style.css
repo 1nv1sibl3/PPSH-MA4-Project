@@ -250,10 +250,7 @@ body {
 	border-color: #a58347;
 }
 
-.contend-area .client-review-section {
-	background: url('../images/tBG01.jpg') no-repeat left center / cover;
-	padding: 55px 0;
-}
+
 
 .contend-area .client-image {
 	position: relative;
@@ -261,24 +258,77 @@ body {
 	margin-top: 55px;
 }
 
-.contend-area .client-review h1{
+
+  
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Styles for the image slider */
+.client-review-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+	background-color: #f0f0f0;
+	margin-bottom: 20px;
+	margin: 0 auto;
+	overflow: hidden;
+  }
+  
+  .client-review-section .container {
+	width: 80%;
+  }
+  
+  .client-review-section .carousel {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	width: 100%;
+	max-width: 1200px; /* Set a maximum width to prevent exceeding container */
+	overflow: hidden;
+	margin: 0 auto; /* Center the carousel horizontally */
+	margin-bottom: 20px; /* Add spacing between slider and next section */
+  }
+  
+  .client-review-section .image-container {
+	display: flex;
+	width: 600%;
+	transform: translateX(0);
+	transition: transform 0.5s ease-in-out;
+  }
+  
+  .client-review-section .image-slide {
+	flex: 0 0 16.666%;
+	text-align: center; /* Center the image */
+	font-size: initial; /* Reset font size for child elements */
+  }
+  
+  .client-review-section .image-slide img {
+	max-width: 100%; /* Limit the width to the container size */
+	max-height: 100%; /* Limit the height to the container size */
+	object-fit: contain; /* Maintain aspect ratio without cropping */
+  }
+  
+  .client-review-section .buttons-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+  }
+  
+  .client-review-section .btn {
+	background-color: rebeccapurple;
 	color: #fff;
-	font-size: 43px;
-	font-weight: 100;
-	font-style: italic;
-	text-align: center;
-}
-
-.contend-area .more-review {
-	width: 10%;
-	position: relative;
-	left: 47%;
-}
-
-.contend-area .more-review img {
-	width: 14px;
-	margin: 40px 5px 75px 0;
-}
+	border: none;
+	padding: 0.5rem;
+	cursor: pointer;
+	width: 49.5%;
+  }
+  
+  .client-review-section .btn:hover {
+	opacity: 0.9;
+  }
+  
+  .client-review-section .btn:focus {
+	outline: none;
+  }
+  
 
 .contend-area .demo-section {
     background: url('../images/arrowBG.png') no-repeat 49.5% -1px;
