@@ -11,6 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-content">
+        <img src="static/images/ppshlatest.png" alt="School Logo" class="loading-logo">
+        <img src="https://media.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif" alt="Loading GIF" class="loading-gif">
+      </div>
+    </div>
     <header class="header-area">
       <div class="container">
         <div class="menu-area">
@@ -139,53 +145,7 @@
           </div>
         </div>
       </section>
-      
-      
-      
-      
-      
-      
-      <div class="color-content">
-        <div class="container">
-          <div class="main-content">
-            <div class="w-30 spes">
-              <div class="first-color"></div>
-              <div class="color-title">
-                <h6>EXTRA STARTUP JUICE</h6>
-                <p>Added Feature</p>
-              </div>
-            </div>
-            <div class="w-30 spes">
-              <div class="second-color"></div>
-              <div class="color-title">
-                <h6>SO THIRSTY</h6>
-                <p>Extra nice UI comes with the app</p>
-              </div>
-            </div>
-            <div class="w-30">
-              <div class="some-text">
-                <h1>So flat you'll want to give it some shadows</h1>
-                <p>
-                  Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="slider-button">
-            <div class="img-wraper">
-              <img
-                src="static/images/left-greater-than-sign-.png"
-                alt="Graterthan Sign"
-              />
-              <img
-                src="static/images/right-greater-than-sign.png"
-                alt="Graterthan Sign"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   
     <!-- FOTER AREA START -->
@@ -196,24 +156,21 @@
             <div class="footer-content">
               <div class="w-60">
                 <p class="first-p">
-                  Overview - TO BE ADDED
+                  Overview - Dive into an enriching exploration of Maharashtra and Sikkim, India, with our class 10 art integration project. Uniting tourism, governance, cuisine, and more, our platform offers a holistic view of these states' vibrant cultures. Join us in discovering the captivating blend of art and information that paints a vivid picture of Maharashtra and Sikkim's essence.
                 </p>
               </div>
-              <div class="w-40 spes">
-                <p class="second-p">
-                  IMP LINKS - TO BE ADDED
-                </p>
-              </div>
+
             </div>
           </div>
           <div class="w-20">
             <div class="footer-menus">
+              Some Important Links
               <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5<a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#Navigator">Navigate</a></li>
+                <li><a href="/credits">Credits</a></li>
+                <li><a href="/compare">Comparison</a></li>
+                <li><a href="/feedback">Feedback<a></li>
               </ul>
             </div>
           </div>
@@ -236,7 +193,12 @@
     </footer>
     <script src="static/js/main.js"></script>
 
-
+    <script>
+      setTimeout(function() {
+        document.getElementById('loadingScreen').style.display = 'none';
+        document.getElementById('mainContent').style.display = 'block';
+      }, 4000); // 4000 milliseconds = 4 seconds
+    </script>
 
     
   </body>

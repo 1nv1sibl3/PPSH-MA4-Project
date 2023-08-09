@@ -214,7 +214,7 @@ body {
 
 .contend-area .download-section h1{
 	font-weight: 800;
-	font-size: 150px;
+	font-size: 130px;
 	line-height: 1.1;
 	margin: 0;
 	font-weight: 100;
@@ -674,4 +674,40 @@ body {
 	background-color: #d0d0d0;
   }
   
+
+/* NAVIGATOR SECTION END */
+
+/* LOADER */
+
+/* loading.css */
+.loading-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white; /* Set the background color for the loading screen */
+	z-index: 9999; /* Make sure the loading screen is on top */
+	text-align: center;
+  }
+  
+  .loading-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .loading-logo {
+	width: 200px; /* Adjust the logo width */
+	height: auto;
+	margin-bottom: 10px; /* Adjust margin to create space between logo and GIF */
+  }
+  
+  .loading-gif {
+	width: 100px; /* Adjust the loading GIF size */
+	height: 100px;
+  }
   
