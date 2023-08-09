@@ -650,4 +650,11 @@
 	.navigator-section .container {
 	  height: auto; /* Allow the section to adjust its height based on content on mobile devices */
 	}
+  
+    .navigator-section .link {
+    font-size: 0.8rem; /* Adjust font size for mobile */
+    padding: 0.5rem; /* Adjust padding for mobile */
+    border-radius: 0.5rem; /* Adjust border radius for mobile */
   }
+
+}
