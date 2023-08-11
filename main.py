@@ -15,6 +15,17 @@ app.template_folder = "./templates"
 def home():
     return render_template("index.html")
 
+@app.route("/credits")
+def credits():
+    return render_template("credits.html")
+
+@app.route("/compare")
+def compare():
+    return render_template("compare.html")
+
+@app.route("/ContactUs")
+def ContactUs():
+    return render_template("contact.html")
 
 # Run webserver
 def run_webserver():
