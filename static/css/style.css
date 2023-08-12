@@ -9,7 +9,7 @@ body {
      GLOBAL CSS START 	  |
 ``````````````````````````
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
- */
+*/
 .container {
 	width: 85%;
 	margin: auto;
@@ -151,17 +151,6 @@ body {
 	clear: both;
 }
 
-@media (max-width: 768px) {
-    .header-area .menu-area nav > ul > li {
-        float: none;
-        display: block;
-        margin: 5px 0; /* Adjust margin for spacing */
-    }
-    
-    .header-area .menu-area nav > ul > li > a {
-        padding: 8px 15px; /* Adjust padding for touch-friendly sizes */
-    }
-}
 
 .header-area .header-content h1{
     color: #FFF;
@@ -614,6 +603,7 @@ body {
 .navigator-section img {
 	width: 100%;
 	max-width: 100%;
+	min-height: 300px;
 	height: auto;
 	object-fit: cover;
 	border: 1px solid #ddd; /* Add border */
