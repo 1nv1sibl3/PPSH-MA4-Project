@@ -613,4 +613,406 @@
 	}
 }
 
+@media only screen and (max-width: 280px) {
+    .header-area .menu-area nav > ul > li > a {
+        font-size: 12px;
+        padding: 16px 5px;
+    }
+    
+    .header-area .play-icon {
+        left: 30%;
+    }
+    
+    .header-area .button {
+        left: 14%;
+    }
+    
+    .header-area .button a {
+        padding: 10px 25px;
+    }
+    
+    .contend-area .download-section a {
+        padding: 9px 9px;
+    }
+    
+    .contend-area .client-image {
+        left: 26%;
+    }
+    
+    .contend-area .more-review {
+        left: 38%;
+        width: 25%;
+    }
+    
+    .contend-area .more-review img {
+        width: 11px;
+    }
+    
+    .contend-area .demo-section .demo-button {
+        left: 18%;
+    }
+    
+    .contend-area .color-content .some-text h1 {
+        font-size: 28px;
+    }
+    
+    .footer-area .logo {
+        left: 35%;
+    }
+    
+    .footer-area .logo img {
+        width: 100%;
+    }
+    
+    .footer-area .footer-content .first-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-content .second-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-menus a {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .footer-area .footer-menus ul {
+        padding: 0;
+    }
+    
+    .footer-area .footer-menus li {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media only screen and (max-width: 240px) {
+    .header-area .menu-area nav > ul > li > a {
+        font-size: 11px;
+        padding: 16px 5px;
+    }
+    
+    .header-area .play-icon {
+        left: 28%;
+    }
+    
+    .header-area .button {
+        left: 12%;
+    }
+    
+    .header-area .button a {
+        padding: 10px 20px;
+    }
+    
+    .contend-area .download-section a {
+        padding: 9px 9px;
+    }
+    
+    .contend-area .client-image {
+        left: 24%;
+    }
+    
+    .contend-area .more-review {
+        left: 36%;
+        width: 25%;
+    }
+    
+    .contend-area .more-review img {
+        width: 11px;
+    }
+    
+    .contend-area .demo-section .demo-button {
+        left: 16%;
+    }
+    
+    .contend-area .color-content .some-text h1 {
+        font-size: 28px;
+    }
+    
+    .footer-area .logo {
+        left: 35%;
+    }
+    
+    .footer-area .logo img {
+        width: 100%;
+    }
+    
+    .footer-area .footer-content .first-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-content .second-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-menus a {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .footer-area .footer-menus ul {
+        padding: 0;
+    }
+    
+    .footer-area .footer-menus li {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media only screen and (max-width: 220px) {
+    .header-area .menu-area nav > ul > li > a {
+        font-size: 10px;
+        padding: 16px 5px;
+    }
+    
+    .header-area .play-icon {
+        left: 26%;
+    }
+    
+    .header-area .button {
+        left: 10%;
+    }
+    
+    .header-area .button a {
+        padding: 10px 15px;
+    }
+    
+    .contend-area .download-section a {
+        padding: 9px 9px;
+    }
+    
+    .contend-area .client-image {
+        left: 22%;
+    }
+    
+    .contend-area .more-review {
+        left: 34%;
+        width: 25%;
+    }
+    
+    .contend-area .more-review img {
+        width: 11px;
+    }
+    
+    .contend-area .demo-section .demo-button {
+        left: 14%;
+    }
+    
+    .contend-area .color-content .some-text h1 {
+        font-size: 28px;
+    }
+    
+    .footer-area .logo {
+        left: 35%;
+    }
+    
+    .footer-area .logo img {
+        width: 100%;
+    }
+    
+    .footer-area .footer-content .first-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-content .second-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-menus a {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .footer-area .footer-menus ul {
+        padding: 0;
+    }
+    
+    .footer-area .footer-menus li {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media only screen and (max-width: 200px) {
+    .header-area .menu-area nav > ul > li > a {
+        font-size: 9px;
+        padding: 16px 5px;
+    }
+    
+    .header-area .play-icon {
+        left: 24%;
+    }
+    
+    .header-area .button {
+        left: 8%;
+    }
+    
+    .header-area .button a {
+        padding: 10px 10px;
+    }
+    
+    .contend-area .download-section a {
+        padding: 9px 9px;
+    }
+    
+    .contend-area .client-image {
+        left: 20%;
+    }
+    
+    .contend-area .more-review {
+        left: 32%;
+        width: 25%;
+    }
+    
+    .contend-area .more-review img {
+        width: 11px;
+    }
+    
+    .contend-area .demo-section .demo-button {
+        left: 12%;
+    }
+    
+    .contend-area .color-content .some-text h1 {
+        font-size: 28px;
+    }
+    
+    .footer-area .logo {
+        left: 35%;
+    }
+    
+    .footer-area .logo img {
+        width: 100%;
+    }
+    
+    .footer-area .footer-content .first-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-content .second-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-menus a {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .footer-area .footer-menus ul {
+        padding: 0;
+    }
+    
+    .footer-area .footer-menus li {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media only screen and (max-width: 190px) {
+    .header-area .menu-area nav > ul > li > a {
+        font-size: 8px;
+        padding: 16px 5px;
+    }
+    
+    .header-area .play-icon {
+        left: 22%;
+    }
+    
+    .header-area .button {
+        left: 6%;
+    }
+    
+    .header-area .button a {
+        padding: 10px 10px;
+    }
+    
+    .contend-area .download-section a {
+        padding: 9px 9px;
+    }
+    
+    .contend-area .client-image {
+        left: 18%;
+    }
+    
+    .contend-area .more-review {
+        left: 30%;
+        width: 25%;
+    }
+    
+    .contend-area .more-review img {
+        width: 11px;
+    }
+    
+    .contend-area .demo-section .demo-button {
+        left: 10%;
+    }
+    
+    .contend-area .color-content .some-text h1 {
+        font-size: 28px;
+    }
+    
+    .footer-area .logo {
+        left: 35%;
+    }
+    
+    .footer-area .logo img {
+        width: 100%;
+    }
+    
+    .footer-area .footer-content .first-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-content .second-p {
+        line-height: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+    
+    .footer-area .footer-menus a {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .footer-area .footer-menus ul {
+        padding: 0;
+    }
+    
+    .footer-area .footer-menus li {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+}
+
+ 
+
+    
+
+  
+
+
 
