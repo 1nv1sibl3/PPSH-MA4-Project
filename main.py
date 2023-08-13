@@ -34,7 +34,7 @@ def page_not_found(e):
     return render_template("404.html"), 404
 
 # MAHARASHTRA and its sub topics
-@app.route("/MH/etymology")
+@app.route("/MH/")
 def MH_etymology():
     return render_template("MH/etymology.html")
 
