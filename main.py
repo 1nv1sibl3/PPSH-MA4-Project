@@ -45,7 +45,7 @@ def MH_history():
 
 # Run webserver
 def run_webserver():
-    app.run(host='0.0.0.0', debug=True, port=8080)
+    app.run(host='0.0.0.0', debug=True, port=8082)
 
 if __name__ == "__main__":
     run_webserver()

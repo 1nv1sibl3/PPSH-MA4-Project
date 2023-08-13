@@ -69,7 +69,7 @@ body {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
  .header-area {
-    background: url('https://www.shutterstock.com/image-vector/history-doodles-lettering-education-banner-260nw-1280191930.jpg') no-repeat center center / cover;
+    background: url('../../images/MH/historybanner.webp') no-repeat center center / cover;
 	padding: 60px 0;
 	
 }
@@ -276,10 +276,19 @@ body {
     background-color: #F8E0E0;
 }
 
+
+
 .content-section-2 {
     background-color: #E0F8E0;
 }
 
+.content-section-3{
+	background-color: #FFF;
+}
+
+.content-section-4{
+	background-color: #cbcbcb;
+}
 /* Add more section classes and colors as needed */
 
 /* Container styles */
@@ -292,15 +301,49 @@ body {
 /* Content styles */
 .content {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     text-align: center;
 }
 
+.content-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
 .content-image {
-    max-width: 100%;
+    max-width: 100%; /* Adjust the width as needed */
     height: auto;
 }
 
-/* Other styles... */
+.content-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 50%; /* Adjust the width as needed */
+    padding: 0 20px;
+	text-align: justify;
+}
+
+/* Add animations to header and content text */
+.animate__animated {
+    --animate-duration: 1s; /* Animation duration */
+}
+
+.cssFont_1 {
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 30px;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+	font-variant: normal;
+	}
+
+.cssFont_2 {
+		font-family: 'Nanum Gothic', sans-serif;
+		font-weight: bold;
+		}
