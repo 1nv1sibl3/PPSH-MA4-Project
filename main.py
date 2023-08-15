@@ -42,10 +42,14 @@ def MH_etymology():
 def MH_history():
     return render_template("MH/history.html")
 
+@app.route("/MH/geography")
+def MH_geography():
+    return render_template("MH/geography.html")
+
 
 # Run webserver
 def run_webserver():
-    app.run(host='0.0.0.0', debug=True, port=8082)#, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
+    app.run(host='0.0.0.0', debug=True, port=8082, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
 
 if __name__ == "__main__":
     run_webserver()
