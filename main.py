@@ -75,9 +75,51 @@ def MH_tourism():
     return render_template('MH/tourism.html')
 
 
+# SIKKIM ROUTES and ITS SUB TOPICS
+@app.route("/SK/")
+def SK_etymology():
+    return render_template("SK/etymology.html")
+
+@app.route("/SK/history")
+def SK_history():
+    return render_template("SK/history.html")
+
+@app.route("/SK/geography")
+def SK_geography():
+    return render_template("SK/geography.html")
+
+@app.route("/SK/governance")
+def SK_governance():
+    return render_template("SK/governance.html")
+
+@app.route("/SK/culture")
+def SK_culture():
+    return render_template("SK/culture.html")
+
+@app.route("/SK/media")
+def SK_media():
+    return render_template("SK/media.html")
+
+@app.route("/SK/education")
+def SK_education():
+    return render_template('SK/education.html')
+
+@app.route("/SK/cuisine")
+def SK_cuisine():
+    return render_template('SK/cuisine.html')
+
+@app.route("/SK/sports")
+def SK_sports():
+    return render_template('SK/sports.html')
+
+@app.route("/SK/tourism")
+def SK_tourism():
+    return render_template('SK/tourism.html')
+
+
 # Run webserver
 def run_webserver():
-    app.run(host='0.0.0.0', debug=True, port=8082, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
+    app.run(host='0.0.0.0', debug=True, port=8080)#, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
 
 if __name__ == "__main__":
     run_webserver()
