@@ -66,6 +66,14 @@ def MH_education():
 def MH_cuisine():
     return render_template('MH/cuisine.html')
 
+@app.route("/MH/sports")
+def MH_sports():
+    return render_template('MH/sports.html')
+
+@app.route("/MH/tourism")
+def MH_tourism():
+    return render_template('MH/tourism.html')
+
 
 # Run webserver
 def run_webserver():
