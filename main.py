@@ -50,6 +50,10 @@ def MH_geography():
 def MH_governance():
     return render_template("MH/governance.html")
 
+@app.route("/MH/culture")
+def MH_culture():
+    return render_template("MH/culture.html")
+
 
 # Run webserver
 def run_webserver():
