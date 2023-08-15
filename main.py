@@ -46,6 +46,10 @@ def MH_history():
 def MH_geography():
     return render_template("MH/geography.html")
 
+@app.route("/MH/governance")
+def MH_governance():
+    return render_template("MH/governance.html")
+
 
 # Run webserver
 def run_webserver():
