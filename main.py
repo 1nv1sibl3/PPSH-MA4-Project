@@ -62,6 +62,11 @@ def MH_media():
 def MH_education():
     return render_template('MH/education.html')
 
+@app.route("/MH/cuisine")
+def MH_cuisine():
+    return render_template('MH/cuisine.html')
+
+
 # Run webserver
 def run_webserver():
     app.run(host='0.0.0.0', debug=True, port=8080)#, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
