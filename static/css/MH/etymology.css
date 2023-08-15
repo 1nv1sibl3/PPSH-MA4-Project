@@ -157,6 +157,7 @@ body {
     font-weight: 600;
     margin: 0;
     margin-bottom: 20px;
+	text-shadow: 0 0 3px #ffffff, 0 0 5px #282828;
 }
 
 .header-area .header-content {
@@ -265,56 +266,88 @@ body {
 ~~~~~~~~
 */
 
-/* Set the background color and image */
-.intro-section {
-    background-color: #c2cda6; /* Choose your preferred color */
-    background-image: url('../images/header-back.jpg'); /* Adjust the path */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0; /* Adjust padding as needed */
+/* Reset default margin and padding for sections */
+.content-section {
+    margin: 0;
+    padding: 0;
 }
 
-/* Center the content inside the container */
+/* Define background colors for sections */
+.content-section-1 {
+    background-color: #F8E0E0;
+}
+
+
+
+.content-section-2 {
+    background-color: #E0F8E0;
+}
+
+.content-section-3{
+	background-color: #FFF;
+}
+
+.content-section-4{
+	background-color: #cbcbcb;
+}
+/* Add more section classes and colors as needed */
+
+/* Container styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Adjust padding as needed */
+    padding: 20px;
 }
 
-/* Center the text inside the intro-content */
-.intro-content {
-    text-align: justify;
-    color: #fff; /* Text color */
-
-}
-
-/* Add some margin to the top */
-.intro-content h2 {
-    margin-top: 20px; /* Adjust margin as needed */
-    font-size: 24px; /* Adjust font size as needed */
-}
-
-.headinggg {
-    color: #1e1b1b;
-    font-size: 100px;
-    font-weight: 600;
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
     text-align: center;
-
 }
 
-/* Add animation to the intro section */
-.intro-section .animate__animated {
+.content-wrap {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center;
+    justify-content: center; /* Center content vertically and horizontally */
+    margin-top: 40px;
+}
+
+.content-image {
+    max-width: 200%; /* Allow the image to take full available width */
+    max-height: auto; /* Limit image height to 70% of viewport height */
+    margin-bottom: 20px; /* Add some spacing between image and text */
+}
+
+
+.content-text {
+    font-size: 30px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 50%; /* Adjust the width as needed */
+    padding: 0 20px;
+	text-align: justify;
+}
+
+/* Add animations to header and content text */
+.animate__animated {
     --animate-duration: 1s; /* Animation duration */
 }
 
-.animate__animated {
-    --animate-duration: 3s; /* Animation duration */
-}
 .cssFont_1 {
 	font-family: 'Fjalla One', sans-serif;
+	font-size: 70px;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+	font-variant: normal;
 	}
 
 .cssFont_2 {
 		font-family: 'Nanum Gothic', sans-serif;
 		font-weight: bold;
+
 		}
