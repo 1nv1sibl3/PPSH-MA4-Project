@@ -54,6 +54,9 @@ def MH_governance():
 def MH_culture():
     return render_template("MH/culture.html")
 
+@app.route("/MH/media")
+def MH_media():
+    return render_template("MH/media.html")
 
 # Run webserver
 def run_webserver():
