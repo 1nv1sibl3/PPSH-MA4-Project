@@ -6,6 +6,9 @@ import json
 import os
 from datetime import datetime
 
+HARDCODED_USERNAME = 'admin'
+HARDCODED_PASSWORD = 'Omp@12345'
+
 def save_feedback(feedback_data):
     feedback_file_path = './templates/feedbacks.json'
 
@@ -24,6 +27,7 @@ def save_feedback(feedback_data):
 
 # Flask app
 app = Flask("Art-Integration-MA4")
+app.secret_key = "Inv1s1bl3-the-great"
 
 # Define path ways
 app.static_folder = "./static"
@@ -149,9 +153,42 @@ def SK_tourism():
     return render_template('SK/tourism.html')
 
 
+# ADMIN
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        if username == HARDCODED_USERNAME and password == HARDCODED_PASSWORD:
+            session['logged_in'] = True
+            return redirect('/admin')
+        else:
+            return "Invalid username or password"
+
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+
+    session['logged_in'] = False
+    return redirect('/')
+
+@app.route('/admin', methods=['GET', 'POST'])
+def admin_panel():
+    if not session.get('logged_in'):
+        return redirect(url_for('login'))
+
+    with open('./templates/feedbacks.json', 'r') as f:
+        feedback_data = json.load(f)
+
+    return render_template('admin.html', feedback_entries=feedback_data)
+
+
 # Run webserver
 def run_webserver():
-    app.run(host='0.0.0.0', debug=True, port=8082, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
+    app.run(host='0.0.0.0', debug=True, port=8082)#, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
 
 if __name__ == "__main__":
     run_webserver()
