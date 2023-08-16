@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/ppshlatest.png" type="image/icon type">
+    <title>Art Integration - Feedback Recieved</title>
+ 
+</head>
+<body>
+      {% if submitted %}
+            <script>
+                alert("Thank you for your feedback! We appreciate your input.");
+                // redirect to /feedback
+                window.location.href = "/feedback";
+            </script>
+
+      {% endif %}
+
+
+</body>
+</html>

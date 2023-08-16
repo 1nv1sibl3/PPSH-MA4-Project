@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````
+     GLOBAL CSS START 	  |
+``````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+.container {
+	width: 85%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.w-45 {
+	width: 49%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-30 {
+	width: 32%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-80 {
+	width: 80%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-60 {
+	width: 60%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-40 {
+	width: 40%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-20 {
+	width: 20%;
+	float: left;
+	overflow: hidden;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````
+     GLOBAL CSS END 	  |
+``````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````
+    HEADER AREA START	  |
+``````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+ .header-area {
+    background: url('../images/hero.jpg') no-repeat center center / cover;
+	padding: 60px 0;
+	
+}
+
+.header-area .menu-area {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 40px;
+}
+
+.header-area .menu-area ul {
+	margin: 0;
+	padding: 0;
+}
+
+.header-area .menu-area nav > ul > li {
+    float: left;
+    margin-left: 3px;
+    list-style: none;
+}
+
+.header-area .menu-area nav {
+    background: #00000026;
+    padding: 16px;
+    border-radius: 7px;
+}
+
+.header-area .menu-area nav > ul > li > a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 16px 39px;
+	transition: all .6s;
+}
+
+.header-area .menu-area nav > ul > li > a:hover {
+	font-weight: bold;
+    color: #e2b17b;
+    background: #54586352;
+	border-bottom: 2px solid #e2b17b;
+}
+
+.header-area .menu-area ul ul {
+    position: absolute;
+    top: 104%;
+    background: #33035147;
+	display: none;
+}
+
+.header-area .menu-area ul :hover ul{
+	display: block;
+}
+
+
+.header-area .menu-area nav ul ul li {
+    list-style: none;
+}
+
+.header-area .menu-area nav ul ul li a {
+    text-decoration: none;
+    width: 180px;
+    display: block;
+    font-size: 20px;
+    padding: 9px 35px;
+    font-weight: normal;
+    color: #fff;
+	transition: all .6s;
+}
+
+.header-area .menu-area nav ul ul li a:hover {
+	color: #27c4f4;
+	background: #6a789d52;
+}
+
+
+.header-area .menu-area nav > ul:after {
+	content:'';
+	display: inline-block;
+	clear: both;
+}
+
+.header-area .header-content h1{
+    color: #1e1b1b;
+    font-size: 100px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.header-area .header-content {
+	text-align: center;
+	padding-top: 120px;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````
+    FOOTER AREA START	  |
+``````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+.footer-area {
+	background: #7accc8;
+	padding: 70px 0;
+}
+
+.footer-area .text-content {
+	overflow: hidden;
+}
+
+.footer-area .text-content::after{
+	content: '';
+	display: inline-block;
+	clear: both;
+}
+
+.footer-area .footer-content .first-p{
+	color: #fff;
+    line-height: 30px;
+	font-weight: 300;
+	padding-right: 186px;
+	font-size: 14px;
+}
+.footer-area .footer-content .spes {
+	margin-left: -150px;
+}
+.footer-area .footer-content .second-p{
+	color: #fff;
+    line-height: 30px;
+	font-weight: 300;
+	padding-right: 90px;
+	font-size: 14px;
+}
+
+.footer-area .footer-menus ul {
+	list-style: none;
+} 
+
+.footer-area .footer-menus li {
+	text-decoration: none;
+	display: inline-block;
+	margin-bottom: 10px;
+} 
+
+.footer-area .footer-menus a {
+	text-decoration: none;
+	color: #FFF;
+	font-weight: 300;
+	transition: all .6s;
+} 
+
+.footer-area .footer-menus a:hover {
+	color: #5db3af;
+} 
+
+.footer-area .logo {
+	position: relative;
+	left: 48%;
+	margin: 80px 0;
+}
+
+.footer-area .logo img {
+	transition: all 3s;
+}
+
+.footer-area .logo img:hover {
+	 transform: rotate(360deg);
+}
+
+
+.footer-area .copyright p{
+	font-size: 13px;
+    color: #FFF;
+    letter-spacing: 3px;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 150px;
+}
+
+.footer-area .copyright a{
+    color: #42817e;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+.footer-area .copyright a:hover{
+    color: #2f5c5a;
+}
+
+
+
+/* MAIN AREA CSS */
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.feedback-section {
+    display: flex;
+	flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+	background: url('../images/tBG01.jpg') no-repeat left center / cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.feedback-card {
+    flex: 1;
+    background-color: #cdcdcd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 80vh; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedback-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.feedback-form h2 {
+    margin-bottom: 1rem;
+    font-size: 70px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #333; /* Change the color to your preference */
+}
+
+.feedback-text {
+    flex: 1;
+    padding: 2rem;
+	font-size: 30px; 
+	flex-grow: 1;
+	text-align: justify;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+    max-height: 40px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+	overflow: hidden;
+    margin-bottom: 10px; /* Add some spacing between labels */
+}
+
+input{
+	padding: 0.5rem 1rem;
+	border: 1px solid #333;
+	border-radius: 5px;
+	font-size: 20px;
+}
+/*as label is extended do not let it to overflow the section or the card */
+
+
+textarea {
+	padding: 0.5rem 1rem;
+	border: 1px solid #333;
+	border-radius: 5px;
+	font-size: 20px;
+	resize: vertical;
+
+}
+
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+	font-size: 30px;
+}
+
+

@@ -2,6 +2,25 @@
 
 # Imports
 from flask import *
+import json
+import os
+from datetime import datetime
+
+def save_feedback(feedback_data):
+    feedback_file_path = './templates/feedbacks.json'
+
+    if not os.path.exists(feedback_file_path):
+        with open(feedback_file_path, 'w') as f:
+            json.dump([], f)
+
+    with open(feedback_file_path, 'r') as f:
+        existing_data = json.load(f)
+
+    feedback_data['timestamp'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    existing_data.append(feedback_data)
+
+    with open(feedback_file_path, 'w') as f:
+        json.dump(existing_data, f, indent=4)
 
 # Flask app
 app = Flask("Art-Integration-MA4")
@@ -25,7 +44,20 @@ def compare():
 
 @app.route("/feedback")
 def ContactUs():
-    return render_template("feedback.html")
+    return render_template("contact.html")
+
+@app.route('/submit_feedback', methods=['POST'])
+def submit_feedback():
+    name = request.form.get('name')
+    feedback = request.form.get('feedback')
+    
+    feedback_data = {
+        'name': name,
+        'feedback': feedback
+    }
+
+    save_feedback(feedback_data)
+    return render_template("feedback_submitted.html", submitted=True)
 
 
 # Error handling
@@ -119,7 +151,7 @@ def SK_tourism():
 
 # Run webserver
 def run_webserver():
-    app.run(host='0.0.0.0', debug=True, port=8082)#, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
+    app.run(host='0.0.0.0', debug=True, port=8082, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
 
 if __name__ == "__main__":
     run_webserver()
