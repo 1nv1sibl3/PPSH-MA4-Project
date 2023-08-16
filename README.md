@@ -13,4 +13,8 @@ Art Integration - Maharashtra & Sikkim
 # Upcoming Topics:
  - ||TO BE DECIDED||
 
-# Team Info - ```Check on website when done xD```
+# Team Info:- 
+[https://ppshinjewadi.me/credits](https://ppshinjewadi.me/credits)
+
+# Website Released!!!!!
+# [https://ppshinjewadi.me/](https://ppshinjewadi.me/)
