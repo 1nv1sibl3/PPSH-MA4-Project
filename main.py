@@ -234,7 +234,7 @@ def SK_hn_sports():
 
 @app.route("/SK/tourism/hn")
 def SK_hn_tourism():
-    return render_template('SK_hn_hn/tourism.html')
+    return render_template('SK_hn/tourism.html')
 
 # ADMIN
 
@@ -271,7 +271,7 @@ def admin_panel():
 
 # Run webserver
 def run_webserver():
-    app.run(host='0.0.0.0', debug=True, port=8082)#, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
+    app.run(host='0.0.0.0', debug=True, port=8080)#, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
 
 if __name__ == "__main__":
     run_webserver()
