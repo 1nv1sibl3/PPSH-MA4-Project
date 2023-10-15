@@ -152,6 +152,89 @@ def SK_sports():
 def SK_tourism():
     return render_template('SK/tourism.html')
 
+# Hindi links
+# MAHARASHTRA and its sub topics
+@app.route("/MH/hn")
+def MH_hn_etymology():
+    return render_template("MH_hn/etymology.html")
+
+@app.route("/MH/history/hn")
+def MH_hn_history():
+    return render_template("MH_hn/history.html")
+
+@app.route("/MH/geography/hn")
+def MH_hn_geography():
+    return render_template("MH_hn/geography.html")
+
+@app.route("/MH/governance/hn")
+def MH_hn_governance():
+    return render_template("MH_hn/governance.html")
+
+@app.route("/MH/culture/hn")
+def MH_hn_culture():
+    return render_template("MH_hn/culture.html")
+
+@app.route("/MH/media/hn")
+def MH_hn_media():
+    return render_template("MH_hn/media.html")
+
+@app.route("/MH/education/hn")
+def MH_hn_education():
+    return render_template('MH_hn/education.html')
+
+@app.route("/MH/cuisine/hn")
+def MH_hn_cuisine():
+    return render_template('MH_hn/cuisine.html')
+
+@app.route("/MH/sports/hn")
+def MH_hn_sports():
+    return render_template('MH_hn/sports.html')
+
+@app.route("/MH/tourism/hn")
+def MH_hn_tourism():
+    return render_template('MH_hn/tourism.html')
+
+
+# SIKKIM ROUTES and ITS SUB TOPICS
+@app.route("/SK/hn")
+def SK_hn_etymology():
+    return render_template("SK_hn/etymology.html")
+
+@app.route("/SK/history/hn")
+def SK_hn_history():
+    return render_template("SK_hn/history.html")
+
+@app.route("/SK/geography/hn")
+def SK_hn_geography():
+    return render_template("SK_hn/geography.html")
+
+@app.route("/SK/governance/hn")
+def SK_hn_governance():
+    return render_template("SK_hn/governance.html")
+
+@app.route("/SK/culture/hn")
+def SK_hn_culture():
+    return render_template("SK_hn/culture.html")
+
+@app.route("/SK/media/hn")
+def SK_hn_media():
+    return render_template("SK_hn/media.html")
+
+@app.route("/SK/education/hn")
+def SK_hn_education():
+    return render_template('SK_hn/education.html')
+
+@app.route("/SK/cuisine/hn")
+def SK_hn_cuisine():
+    return render_template('SK_hn/cuisine.html')
+
+@app.route("/SK/sports/hn")
+def SK_hn_sports():
+    return render_template('SK_hn/sports.html')
+
+@app.route("/SK/tourism/hn")
+def SK_hn_tourism():
+    return render_template('SK_hn_hn/tourism.html')
 
 # ADMIN
 
@@ -188,7 +271,7 @@ def admin_panel():
 
 # Run webserver
 def run_webserver():
-    app.run(host='0.0.0.0', debug=True, port=8082, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
+    app.run(host='0.0.0.0', debug=True, port=8082)#, ssl_context=('/home/invisible/ppsh/ssl/ppshinjewadi.me.crt' , '/home/invisible/ppsh/ssl/ppshinjewadi.me.key'))
 
 if __name__ == "__main__":
     run_webserver()
