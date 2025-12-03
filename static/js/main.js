@@ -1,38 +1,44 @@
 const Carousel = {
-    img: document.querySelectorAll('#imgs .image-slide'),
-    imgs: document.getElementById('imgs'),
-    leftBtn: document.getElementById('left'),
-    rightBtn: document.getElementById('right'),
-    index: 0,
-    interval: '',
-    intervalTime: 2000,
-    run() {
-      Carousel.index++;
-      Carousel.changeImage();
-    },
-    slide(direction) {
-      direction ? Carousel.index++ : Carousel.index--;
-      Carousel.changeImage();
-      Carousel.resetInterval();
-    },
-    resetInterval() {
-      clearInterval(Carousel.interval);
-      Carousel.interval = setInterval(Carousel.run, Carousel.intervalTime);
-    },
-    changeImage() {
-      if (Carousel.index > Carousel.img.length - 1) {
-        Carousel.index = 0;
-      } else if (Carousel.index < 0) {
-        Carousel.index = Carousel.img.length - 1;
-      }
-      Carousel.imgs.style.transform = `translateX(${-Carousel.index * 16.666}% )`;
-    },
-    start() {
-      Carousel.interval = setInterval(Carousel.run, Carousel.intervalTime);
-      Carousel.leftBtn.addEventListener('click', () => Carousel.slide(false));
-      Carousel.rightBtn.addEventListener('click', () => Carousel.slide(true));
-    },
-  };
-  
-  Carousel.start();
-  
+  slides: document.querySelectorAll('#imgs .image-slide'),
+  track: document.getElementById('imgs'),
+  leftBtn: document.getElementById('left'),
+  rightBtn: document.getElementById('right'),
+  index: 0,
+  interval: null,
+  intervalTime: 4000,
+  get slidesPerView() {
+    if (window.innerWidth >= 1100) return 3;
+    if (window.innerWidth >= 700) return 2;
+    return 1;
+  },
+  changeImage() {
+    const maxIndex = Math.max(0, this.slides.length - this.slidesPerView);
+    if (this.index > maxIndex) this.index = 0;
+    if (this.index < 0) this.index = maxIndex;
+    const offset = (100 / this.slidesPerView) * this.index;
+    this.track.style.transform = `translateX(-${offset}%)`;
+  },
+  next(step = 1) {
+    this.index += step;
+    this.changeImage();
+    this.resetInterval();
+  },
+  prev() {
+    this.index -= 1;
+    this.changeImage();
+    this.resetInterval();
+  },
+  resetInterval() {
+    clearInterval(this.interval);
+    this.interval = setInterval(() => this.next(), this.intervalTime);
+  },
+  init() {
+    if (!this.track) return;
+    this.interval = setInterval(() => this.next(), this.intervalTime);
+    this.leftBtn?.addEventListener('click', () => this.prev());
+    this.rightBtn?.addEventListener('click', () => this.next());
+    window.addEventListener('resize', () => this.changeImage());
+  },
+};
+
+Carousel.init();

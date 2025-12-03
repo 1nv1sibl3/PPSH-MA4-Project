@@ -6,146 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="static/images/ppshlatest.png" type="image/icon type">
     <title>Art Integration - Feedback</title>
+    <link rel="stylesheet" href="static/css/global.css">
     <link rel="stylesheet" href="static/css/contact.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas%20Neue&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header-area">
+  <header class="header-area hero-area">
     <div class="container">
       <div class="menu-area">
         <nav>
           <ul>
             <li><a href="index.html" target="_self">HOME</a></li>
-            <li>
-              <a href="index.html#Navigator" target="_self">NAVIGATOR</a>
-            </li>
+            <li><a href="index.html#Navigator" target="_self">NAVIGATOR</a></li>
             <li><a href="credits.html" target="_self">CREDITS</a></li>
             <li><a href="contact.html" target="_self">FEEDBACK</a></li>
             <li><a href="compare.html" target="_self">COMPARE</a></li>
           </ul>
         </nav>
       </div>
-    </div>
-    <div class="header-content" style="font-family:'Lobster', cursive">
-      <h1></h1>
-    </div>
-</header>
-
-
-<main>
-  <section class="feedback-section">
-      <div class="feedback-card">
-          <h2 class="feedtext" style="font-family:'Bebas Neue', cursive; font-size: 70px;">Provide Feedback</h2>
-          <form id="feedbackForm" action="#" method="post" novalidate>
-              <label for="name">Your Name:</label>
-              <input type="text" id="name" name="name" required>
-              
-              <label for="feedback">Feedback:</label>
-              <textarea id="feedback" name="feedback" rows="4" required></textarea>
-              
-              <button type="submit">Submit Feedback</button>
-          </form>
-          <p class="feedback-message" id="feedbackMessage" aria-live="polite"></p>
-      </div>
-
-      <div class="feedback-text">
-          <p>Thank you for exploring our art integration website showcasing the rich heritage of Maharashtra and Sikkim. We've put a lot of effort into curating this content. If you've had a chance to explore it, we'd love to hear your thoughts! Feel free to share your feedback through the form on our website. Your insights will be incredibly valuable in helping us enhance the user experience.</p>
-      </div>
-  </section>
-</main>
-
-
-
-
-<!-- FOTER AREA START -->
-<footer class="footer-area">
-    <div class="container">
-      <div class="text-content">
-        <div class="w-80">
-          <div class="footer-content">
-            <div class="w-60">
-              <p class="first-p">
-                Overview - Dive into an enriching exploration of Maharashtra and Sikkim, India, with our class 10 art integration project. Uniting tourism, governance, cuisine, and more, our platform offers a holistic view of these states' vibrant cultures. Join us in discovering the captivating blend of art and information that paints a vivid picture of Maharashtra and Sikkim's essence.
-              </p>
-            </div>
-
-          </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">We are listening</p>
+          <h1>Every reflection sharpens the next version of this project.</h1>
+          <p>Drop us a note about what resonated, what you learned, or what else you’d love us to dig into.</p>
         </div>
-        <div class="w-20">
-          <div class="footer-menus">
-            Some Important Links
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html#Navigator">Navigate</a></li>
-              <li><a href="credits.html">Credits</a></li>
-              <li><a href="compare.html">Comparison</a></li>
-              <li><a href="contact.html">Feedback<a></li>
-            </ul>
+        <div class="hero-visual">
+          <div class="glass-panel">
+            <p class="eyebrow">How we use your thoughts</p>
+            <p>Feedback helps us improve translations, update facts, and capture more lived experiences.</p>
           </div>
         </div>
       </div>
-      <div class="logo">
-        <a href="#"><img src="static/images/footer-logo.png" alt="Footer Logo" /></a>
-      </div>
-      <div class="copyright">
-        <p>
-          &copy; 2023 &dash;
-          <a
-            href="https://ppshinjewadi.com/"
-            target="_blank"
-          >
-            Pawar Public School, Hinjewadi Class 10A</a
-          >&dash; All rights reserved
+    </div>
+  </header>
+
+  <main class="contact-main container">
+    <section class="feedback-card glass-panel">
+      <div>
+        <p class="eyebrow">Share feedback</p>
+        <h2>Tell us how Maharashtra &amp; Sikkim felt through your eyes.</h2>
+        <p class="intro">
+          This form sends your note straight to our team inbox so we can respond or incorporate updates quickly.
         </p>
       </div>
+      <form target="_blank" action="https://formsubmit.co/ctf.omhonrao@gmail.com" method="POST">
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Classmate, teacher, or guest" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="email@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="What stood out to you?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+      </form>
+    </section>
+
+    <aside class="info-grid">
+      <article class="card">
+        <p class="eyebrow">Ways to contribute</p>
+        <h3>Request an edit</h3>
+        <p>Spotted a missing reference or fresh statistic? Let us know and we’ll verify it for the next release.</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Media drops</p>
+        <h3>Share visuals</h3>
+        <p>Send us sketches, photographs, or recordings that celebrate Maharashtra or Sikkim.</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Stay updated</p>
+        <h3>Visit Credits</h3>
+        <p>Meet the web, research, and media teams keeping this archive alive.</p>
+        <a class="btn btn-ghost" href="credits.html">Open Credits</a>
+      </article>
+    </aside>
+  </main>
+
+  <footer class="footer-area">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-copy">
+        <p>
+          Overview - Dive into an enriching exploration of Maharashtra and Sikkim, India, with our class 10 art integration project. Uniting tourism, governance, cuisine, and more, our platform offers a holistic view of these states' vibrant cultures. Join us in discovering the captivating blend of art and information that paints a vivid picture of Maharashtra and Sikkim's essence.
+        </p>
+      </div>
+      <div class="footer-links">
+        <p class="eyebrow">Some important links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#Navigator">Navigate</a></li>
+          <li><a href="credits.html">Credits</a></li>
+          <li><a href="compare.html">Comparison</a></li>
+          <li><a href="contact.html">Feedback</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
-  <script>
-    (function () {
-      const STORAGE_KEY = 'artIntegrationFeedbacks';
-      const form = document.getElementById('feedbackForm');
-      const message = document.getElementById('feedbackMessage');
-      if (!form) {
-        return;
-      }
+    <div class="footer-meta">
+      <p>&copy; 2023 — <a href="https://ppshinjewadi.com/" target="_blank">Pawar Public School, Hinjewadi Class 10A</a> — All rights reserved</p>
+    </div>
+  </div>
+</footer>
 
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const name = form.name.value.trim();
-        const feedback = form.feedback.value.trim();
-        if (!name || !feedback) {
-          message.textContent = 'Please complete both fields before submitting.';
-          message.classList.add('is-visible');
-          return;
-        }
-
-        const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-        stored.push({
-          name,
-          feedback,
-          timestamp: new Date().toISOString(),
-        });
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
-
-        message.textContent =
-          'Thank you for your feedback! This static copy stores your note in this browser so you can review it later.';
-        message.classList.add('is-visible');
-        form.reset();
-      });
-    })();
-  </script>
+  
 </body>
 </html>

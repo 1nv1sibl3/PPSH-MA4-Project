@@ -3,9 +3,6 @@
   <head>
     <base href="./">
     <link rel="icon" href="static/images/ppshlatest.png" type="image/icon type">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta
       name="keywords"
@@ -21,201 +18,297 @@
     <meta property="og:image" content="static/images/ppshlatest.png" />
 
     <title>Art Integration - Home</title>
+    <link rel="stylesheet" href="static/css/global.css">
     <link rel="stylesheet" href="static/css/style.css" />
-    <link rel="stylesheet" href="static/css/responsive.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div class="loading-screen" id="loadingScreen">
       <div class="loading-content">
-        <img src="static/images/ppshlatest.png" alt="School Logo" class="loading-logo">
-        <img src="static/images/loading.gif" alt="Loading GIF" class="loading-gif">
+        <div class="spinner" role="status" aria-label="Loading"></div>
+        <p>Loading Art Integration…</p>
       </div>
     </div>
-    <header class="header-area">
+    <header class="header-area hero-area">
       <div class="container">
         <div class="menu-area">
           <nav>
             <ul>
               <li><a href="index.html" target="_self">HOME</a></li>
-              <li>
-                <a href="index.html#Navigator" target="_self">NAVIGATOR</a>
-              </li>
+              <li><a href="index.html#Navigator" target="_self">NAVIGATOR</a></li>
               <li><a href="credits.html" target="_self">CREDITS</a></li>
               <li><a href="contact.html" target="_self">FEEDBACK</a></li>
               <li><a href="compare.html" target="_self">COMPARE</a></li>
             </ul>
           </nav>
         </div>
-        <div class="header-content">
-          <h1>Art Integration</h1>
-          <p>
-            Embark on a Journey through Maharashtra and Sikkim - A Student's Art Integration Project by 10th Graders of Pawar Public School!
-          </p>
-        </div>
-        <div class="play-icon">
-          <img src="static/images/play-button.png" alt="Play Icon" />
-        </div>
-        <div class="button">
-          <a href="#Navigator">Get Started</a>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="hero-badges">
+              <span class="chip">Class 10A</span>
+              <span class="chip">Art Integration</span>
+            </div>
+            <h1>Mapping Maharashtra &amp; Sikkim through culture, data, and stories.</h1>
+            <p>
+              Embark on a journey curated by students of Pawar Public School. We translated months of research, art,
+              and collaboration into a living atlas that celebrates two vibrant Indian states.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#Navigator">Explore Navigator</a>
+              <a class="btn btn-ghost" href="contact.html">Share Feedback</a>
+            </div>
+            <ul class="hero-stats">
+              <li>
+                <span>2</span>
+                States in focus
+              </li>
+              <li>
+                <span>10+</span>
+                Thematic chapters
+              </li>
+              <li>
+                <span>7</span>
+                Student contributors
+              </li>
+              <li>
+                <span>100%</span>
+                Original storytelling
+              </li>
+            </ul>
+          </div>
+            <div class="hero-visual">
+              <div class="glass-panel">
+                <p class="eyebrow">Why this project</p>
+                <p>
+                  Art helped us decode statistics and histories. We layered illustrations, research, and local voices to
+                  show how geography, governance, cuisine, and culture intersect in daily life.
+                </p>
+                <div class="state-preview">
+                  <div>
+                    <strong>Maharashtra</strong>
+                    <span>Coastal energy, forts, cinema, innovation.</span>
+                  </div>
+                  <div>
+                    <strong>Sikkim</strong>
+                    <span>Himalayan calm, monasteries, biodiversity.</span>
+                  </div>
+                </div>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="credits.html">Meet the Team</a>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
     </header>
-    <div class="contend-area">
-      <div class="download-section">
+    <main>
+      <section class="intro-panels">
         <div class="container">
-          <div class="download-content-section">
-            <h1>Introduction</h1>
+          <div class="section-heading">
+            <p class="eyebrow">Project overview</p>
+            <h2>Research-rich storytelling grounded in student curiosity.</h2>
             <p>
-              Welcome to our website, a virtual portal that takes you on an 
-              enthralling journey through the heart of Maharashtra and Sikkim - 
-              two captivating states in India. Embark on an exploration of their 
-              diverse cultures, picturesque landscapes, and enthralling histories 
-              as we unveil the magic they hold.
-            </p>
-            <p>
-              Maharashtra, situated on the western coast, boasts a dynamic blend 
-              of bustling cities, serene beaches, and historical wonders. 
-              Meanwhile, Sikkim, nestled in the lap of the Himalayas, captivates
-              with its breathtaking scenery and vibrant traditions. From the 
-              vibrant festivals of Maharashtra to the tranquil monasteries of 
-              Sikkim, our website offers a comprehensive glimpse into the charm 
-              and allure of these two enchanting states. Get ready to be enchanted!
+              Welcome to our website, a virtual portal that takes you on an enthralling journey through the heart of
+              Maharashtra and Sikkim. Here, art, writing, and civic data illustrate two distinct yet interconnected
+              narratives.
             </p>
           </div>
-        </div>
-      </div>
-      <div class="client-review-section">
-        <div class="container">
-          <div class="carousel">
-            <div class="image-container" id="imgs">
-              <div class="image-slide">
-              <img src="static/images/mover/mh1.jpeg" alt="Slide 1" />
-              </div>
-              <img src="static/images/mover/sk1.jpeg" alt="Slide 2" />
-              <div class="image-slide">
-              <img src="static/images/mover/mh3.jpeg" alt="Slide 3" />
-              </div>
-              <div class="image-slide">
-              <img src="static/images/mover/sk3.jpeg" alt="Slide 4" />
-              </div>
-              <div class="image-slide">
-              <img src="static/images/mover/mh2.jpeg" alt="Slide 5" />
-              </div>
-              <div class="image-slide">
-              <img src="static/images/mover/sk2.jpeg" alt="Slide 6" />
-              </div>
-            </div>
-
-            <!-- Add more slides as needed -->
-            <div class="buttons-container">
-              <button id="left" class="btn">Prev</button>
-              <button id="right" class="btn">Next</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-
-      <section id="Navigator" class="navigator-section">
-        <div class="section">
-          <div class="left">
-            <!-- Image for Maharashtra -->
-            <img src="static/images/MH/mahalogo.jpeg" alt="Maharashtra Image" />
-          </div>
-          <div class="right">
-            <div class="link-container">
-              <!-- Links for Maharashtra -->
-              <a class="cssFont_1" href="MH/etymology.html">Etymology</a>
-              <a class="cssFont_1" href="MH/history.html">History</a>
-              <a class="cssFont_1" href="MH/geography.html">Geography</a>
-              <a class="cssFont_1" href="MH/governance.html">Economy, Demographics, Governance and
-                Administration</a>
-              <a class="cssFont_1" href="MH/culture.html">Culture, Language</a>
-              <a class="cssFont_1" href="MH/media.html">Media</a>
-              <a class="cssFont_1" href="MH/education.html">Education</a>
-              <a class="cssFont_1" href="MH/cuisine.html">Cuisine</a>
-              <a class="cssFont_1" href="MH/sports.html">Sports</a>
-              <a class="cssFont_1" href="MH/tourism.html">Tourism</a>
-            </div>
-          </div>
-        </div>
-        <div class="section">
-          <div class="left">
-            <!-- Image for Sikkim -->
-            <img src="static/images/SK/sikkimhome.jpg" alt="Sikkim Image" />
-          </div>
-          <div class="right">
-            <div class="link-container">
-              <!-- Links for Maharashtra -->
-              <a class="cssFont_1" href="SK/etymology.html">Etymology</a>
-              <a class="cssFont_1" href="SK/history.html">History</a>
-              <a class="cssFont_1" href="SK/geography.html">Geography</a>
-              <a class="cssFont_1" href="SK/governance.html">Economy, Demographics, Governance and
-                Administration</a>
-              <a class="cssFont_1" href="SK/culture.html">Culture, Language</a>
-              <a class="cssFont_1" href="SK/media.html">Media</a>
-              <a class="cssFont_1" href="SK/education.html">Education</a>
-              <a class="cssFont_1" href="SK/cuisine.html">Cuisine</a>
-              <a class="cssFont_1" href="SK/sports.html">Sports</a>
-              <a class="cssFont_1" href="SK/tourism.html">Tourism</a>
-            </div>
+          <div class="panel-grid">
+            <article class="glass-panel">
+              <h3>Maharashtra</h3>
+              <p>
+                A western powerhouse filled with bustling cities, serene beaches, architectural marvels, and an
+                ever-evolving arts scene. Dive into its layered history, governance milestones, culinary icons, and
+                sporting spirit.
+              </p>
+            </article>
+            <article class="glass-panel">
+              <h3>Sikkim</h3>
+              <p>
+                A Himalayan sanctuary stitched together with glacial lakes, alpine forests, and resilient cultures. Meet
+                the monasteries, festivals, and communities safeguarding nature and heritage in equal measure.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-    </div>
+      <section class="highlights">
+        <div class="container">
+          <div class="highlight-grid">
+            <article class="card highlight-card">
+              <p class="eyebrow">01</p>
+              <h3>Curated learning paths</h3>
+              <p>Jump directly to etymology, governance, tourism, or culture with our navigator for both languages.</p>
+            </article>
+            <article class="card highlight-card">
+              <p class="eyebrow">02</p>
+              <h3>Immersive media</h3>
+              <p>Slideshows, illustrations, and embedded videos capture each state’s landscapes and rhythms.</p>
+            </article>
+            <article class="card highlight-card">
+              <p class="eyebrow">03</p>
+              <h3>Student voices</h3>
+              <p>Original writing, primary research, and interviews crafted by our classmates under teacher guidance.</p>
+            </article>
+            <article class="card highlight-card">
+              <p class="eyebrow">04</p>
+              <h3>Quick comparisons</h3>
+              <p>See similarities and contrasts across economy, language, transportation, and natural resources.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="state-carousel">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Visual diary</p>
+            <h2>Slices of Maharashtra &amp; Sikkim captured by our media team.</h2>
+          </div>
+          <div class="glass-panel carousel-shell">
+            <div class="image-track" id="imgs">
+              <div class="image-slide">
+                <img src="static/images/mover/mh1.jpeg" alt="Gateway of India at night" />
+                <span>Maharashtra · Mumbai’s gateway shining against the Arabian Sea</span>
+              </div>
+              <div class="image-slide">
+                <img src="static/images/mover/sk1.jpeg" alt="Prayer flags fluttering in Sikkim" />
+                <span>Sikkim · Prayer flags marking serene trails</span>
+              </div>
+              <div class="image-slide">
+                <img src="static/images/mover/mh3.jpeg" alt="Lavani performance" />
+                <span>Maharashtra · Lavani dance honoring folk traditions</span>
+              </div>
+              <div class="image-slide">
+                <img src="static/images/mover/sk3.jpeg" alt="Tea gardens in Sikkim" />
+                <span>Sikkim · Tea gardens woven into the mountainscape</span>
+              </div>
+              <div class="image-slide">
+                <img src="static/images/mover/mh2.jpeg" alt="Historic fort in Maharashtra" />
+                <span>Maharashtra · Fortresses guarding Maratha history</span>
+              </div>
+              <div class="image-slide">
+                <img src="static/images/mover/sk2.jpeg" alt="Snow peaks" />
+                <span>Sikkim · Snow-capped horizons of the Eastern Himalayas</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button id="left" class="btn-ghost">Previous</button>
+            <button id="right" class="btn-primary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="Navigator" class="navigator-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Navigator</p>
+            <h2>Choose a state, pick a chapter, and start exploring.</h2>
+            <p>Every page is mirrored in Hindi, so classmates and families can learn comfortably.</p>
+          </div>
+          <div class="navigator-grid">
+            <article class="card state-navigator">
+              <header>
+                <img src="static/images/MH/mahalogo.jpeg" alt="Maharashtra" />
+                <div>
+                  <p class="eyebrow">State 01</p>
+                  <h3>Maharashtra</h3>
+                  <p>Industry, arts, and coastlines converge here.</p>
+                </div>
+              </header>
+              <ul>
+                <li><a href="MH/etymology.html">Etymology</a></li>
+                <li><a href="MH/history.html">History</a></li>
+                <li><a href="MH/geography.html">Geography</a></li>
+                <li><a href="MH/governance.html">Economy &amp; Governance</a></li>
+                <li><a href="MH/culture.html">Culture &amp; Language</a></li>
+                <li><a href="MH/media.html">Media</a></li>
+                <li><a href="MH/education.html">Education</a></li>
+                <li><a href="MH/cuisine.html">Cuisine</a></li>
+                <li><a href="MH/sports.html">Sports</a></li>
+                <li><a href="MH/tourism.html">Tourism</a></li>
+                <li><a href="MH/hn">Hindi Index</a></li>
+              </ul>
+            </article>
+            <article class="card state-navigator">
+              <header>
+                <img src="static/images/SK/sikkimhome.jpg" alt="Sikkim" />
+                <div>
+                  <p class="eyebrow">State 02</p>
+                  <h3>Sikkim</h3>
+                  <p>Mountain ecology and monastic heritage in harmony.</p>
+                </div>
+              </header>
+              <ul>
+                <li><a href="SK/etymology.html">Etymology</a></li>
+                <li><a href="SK/history.html">History</a></li>
+                <li><a href="SK/geography.html">Geography</a></li>
+                <li><a href="SK/governance.html">Economy &amp; Governance</a></li>
+                <li><a href="SK/culture.html">Culture &amp; Language</a></li>
+                <li><a href="SK/media.html">Media</a></li>
+                <li><a href="SK/education.html">Education</a></li>
+                <li><a href="SK/cuisine.html">Cuisine</a></li>
+                <li><a href="SK/sports.html">Sports</a></li>
+                <li><a href="SK/tourism.html">Tourism</a></li>
+                <li><a href="SK/hn">Hindi Index</a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="callout">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Keep the loop alive</p>
+            <h2>Tell us what resonated, what surprised you, and what to grow next.</h2>
+            <p>
+              Your feedback directly fuels the next iteration of this project. Drop a note, request an edit, or share a
+              story we may have missed.
+            </p>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="contact.html">Provide Feedback</a>
+            <a class="btn btn-ghost" href="credits.html">View Credits</a>
+            <a class="btn btn-ghost" href="compare.html">Quick Compare</a>
+          </div>
+        </div>
+      </section>
+    </main>
   
     <!-- FOTER AREA START -->
     <footer class="footer-area">
-      <div class="container">
-        <div class="text-content">
-          <div class="w-80">
-            <div class="footer-content">
-              <div class="w-60">
-                <p class="first-p">
-                  Overview - Dive into an enriching exploration of Maharashtra and Sikkim, India, with our class 10 art integration project. Uniting tourism, governance, cuisine, and more, our platform offers a holistic view of these states' vibrant cultures. Join us in discovering the captivating blend of art and information that paints a vivid picture of Maharashtra and Sikkim's essence.
-                </p>
-              </div>
-
-            </div>
-          </div>
-          <div class="w-20">
-            <div class="footer-menus">
-              Some Important Links
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#Navigator">Navigate</a></li>
-                <li><a href="credits.html">Credits</a></li>
-                <li><a href="compare.html">Comparison</a></li>
-                <li><a href="contact.html">Feedback<a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="logo">
-          <a href="#"><img src="static/images/footer-logo.png" alt="Footer Logo" /></a>
-        </div>
-        <div class="copyright">
-          <p>
-            &copy; 2023 &dash;
-            <a
-              href="https://ppshinjewadi.com/"
-              target="_blank"
-            >
-              Pawar Public School, Hinjewadi Class 10A</a
-            >&dash; All rights reserved
-          </p>
-        </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-copy">
+        <p>
+          Overview - Dive into an enriching exploration of Maharashtra and Sikkim, India, with our class 10 art integration project. Uniting tourism, governance, cuisine, and more, our platform offers a holistic view of these states' vibrant cultures. Join us in discovering the captivating blend of art and information that paints a vivid picture of Maharashtra and Sikkim's essence.
+        </p>
       </div>
-    </footer>
+      <div class="footer-links">
+        <p class="eyebrow">Some important links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#Navigator">Navigate</a></li>
+          <li><a href="credits.html">Credits</a></li>
+          <li><a href="compare.html">Comparison</a></li>
+          <li><a href="contact.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; 2023 — <a href="https://ppshinjewadi.com/" target="_blank">Pawar Public School, Hinjewadi Class 10A</a> — All rights reserved</p>
+    </div>
+  </div>
+</footer>
     <script src="static/js/main.js"></script>
 
     <script>
-      setTimeout(function() {
-        document.getElementById('loadingScreen').style.display = 'none';
-        document.getElementById('mainContent').style.display = 'block';
-      }, 4000); // 4000 milliseconds = 4 seconds
+      const loadingScreen = document.getElementById('loadingScreen');
+      window.addEventListener('load', () => {
+        setTimeout(() => loadingScreen?.classList.add('hidden'), 800);
+      });
     </script>
 
     
