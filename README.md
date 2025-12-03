@@ -1,20 +1,34 @@
 # PPSH-MA4-Project
-Just a normal school project!
+Fully static Art-Integration showcase for Maharashtra × Sikkim, built by Pawar Public School Hinjewadi Class 10A. The redesigned site now lives on GitHub Pages and highlights tourism, governance, cuisine, language, and more through a modern responsive layout.
 
-# Theme
-Art Integration - Maharashtra & Sikkim
+## Live Site
+- https://ppsh.any-platform.xyz/
 
-# Main Routes:
- - /home/
- - /home?#navigation
- - /credits/
- - /comparison/
+## Highlights
+- 🎨 Unified dark/glassmorphism UI across every page, including Hindi translations.
+- 🗂️ Chapter hubs for Maharashtra (`/MH`) and Sikkim (`/SK`) plus their Hindi counterparts.
+- 👥 Credits page featuring the 7-person team and their roles.
+- 💬 FormSubmit-powered feedback form that emails submissions to `ctf.omhonrao@gmail.com`.
+- 📱 Responsive navigation, hero cards, and alternating content sections optimized for mobile through desktop.
 
-# Upcoming Topics:
- - ||TO BE DECIDED||
+## Project Structure
+```
+.
+├── index.html / compare.html / contact.html / credits.html / admin.html / login.html
+├── MH/ & SK/          # English content chapters per topic
+├── MH_hn/ & SK_hn/    # Hindi translations for each topic
+├── static/
+│   ├── css/
+│   │   ├── global.css           # base layout + shared components
+│   │   ├── credits.css          # credits page styling
+│   │   ├── compare.css, contact.css, style.css
+│   │   ├── chapter-shared.css   # shared styling for state chapters
+│   │   └── MH/ & SK/            # thin wrappers importing shared styles
+│   └── images/                  # logos, portraits, chapter illustrations
+├── .github/workflows/main_ppsh.yml  # GitHub Pages deployment
+└── README.md
+```
 
-# Team Info:- 
-[https://ppshinjewadi.me/credits](https://ppsh.any-platform.xyz/credits)
 
-# Website Released!!!!!
-# [https://ppshinjewadi.me/](https://ppsh.any-platform.xyz/)
+## Credits
+Seven classmates researched, translated, wrote, and designed every chapter, with Om Honrao leading website design. Full acknowledgements live at https://ppsh.any-platform.xyz/credits.
