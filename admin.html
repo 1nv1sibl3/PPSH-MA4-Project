@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="./">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/ppshlatest.png" type="image/icon type">
+    <title>Admin Panel</title>
+    <style>
+        :root {
+            font-family: 'Lato', sans-serif;
+            color: #0a2c3d;
+        }
+        body {
+            margin: 0;
+            padding: 2rem;
+            background: #f2f6f7;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        button {
+            background-color: #045762;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover {
+            background-color: #033f45;
+        }
+        .admin-note {
+            margin: 1rem 0 2rem 0;
+            color: #274b5c;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e1eaed;
+        }
+        th {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #045762;
+        }
+        tbody tr:hover {
+            background: #f8fbfc;
+        }
+        .feedback-text {
+            white-space: pre-wrap;
+        }
+        .hidden {
+            display: none;
+        }
+        #emptyState {
+            text-align: center;
+            font-weight: 600;
+            color: #045762;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <button id="logoutButton" type="button">Logout</button>
+    </header>
+    <p class="admin-note">
+        This GitHub Pages build is fully static, so feedback submitted from the form is stored in the visitor's own browser.
+        Entries below combine the archived <code>feedbacks.json</code> data with any messages saved locally from this device.
+    </p>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Feedback</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="feedbackTableBody">
+                <tr class="hidden">
+                    <td colspan="3">Loading feedback…</td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="emptyState" class="hidden">No feedback entries found.</p>
+    </div>
+
+    <script>
+        (function () {
+            const LOGIN_KEY = 'artIntegrationLoggedIn';
+            const STORAGE_KEY = 'artIntegrationFeedbacks';
+            const tableBody = document.getElementById('feedbackTableBody');
+            const emptyState = document.getElementById('emptyState');
+            const logoutButton = document.getElementById('logoutButton');
+
+            if (sessionStorage.getItem(LOGIN_KEY) !== 'true') {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            logoutButton.addEventListener('click', () => {
+                sessionStorage.removeItem(LOGIN_KEY);
+                window.location.href = 'login.html';
+            });
+
+            function createRow(entry) {
+                const row = document.createElement('tr');
+                const nameCell = document.createElement('td');
+                const feedbackCell = document.createElement('td');
+                const timeCell = document.createElement('td');
+
+                nameCell.textContent = entry.name || 'Anonymous';
+                feedbackCell.textContent = entry.feedback || '';
+                feedbackCell.classList.add('feedback-text');
+                timeCell.textContent = entry.timestamp ? new Date(entry.timestamp).toLocaleString() : 'N/A';
+
+                row.appendChild(nameCell);
+                row.appendChild(feedbackCell);
+                row.appendChild(timeCell);
+                return row;
+            }
+
+            async function loadServerFeedback() {
+                try {
+                    const response = await fetch('feedbacks.json', { cache: 'no-cache' });
+                    if (!response.ok) {
+                        return [];
+                    }
+                    const data = await response.json();
+                    return Array.isArray(data) ? data : [];
+                } catch (error) {
+                    console.warn('Unable to load feedbacks.json', error);
+                    return [];
+                }
+            }
+
+            function loadLocalFeedback() {
+                try {
+                    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    return Array.isArray(data) ? data : [];
+                } catch (error) {
+                    console.warn('Unable to parse local feedback data', error);
+                    return [];
+                }
+            }
+
+            async function init() {
+                const archived = await loadServerFeedback();
+                const localEntries = loadLocalFeedback();
+                const combined = archived.concat(localEntries);
+
+                if (!combined.length) {
+                    emptyState.classList.remove('hidden');
+                    return;
+                }
+
+                emptyState.classList.add('hidden');
+                tableBody.innerHTML = '';
+                combined.forEach((entry) => tableBody.appendChild(createRow(entry)));
+            }
+
+            init();
+        })();
+    </script>
+</body>
+</html>

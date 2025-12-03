@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="./">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/ppshlatest.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
+    <title>Admin Login</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Lato', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f2027, #2c5364);
+            color: #fff;
+        }
+        .login-card {
+            background: rgba(255,255,255,0.08);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: min(90vw, 420px);
+        }
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 1rem 0 0.25rem 0;
+        }
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+        }
+        button {
+            width: 100%;
+            padding: 0.85rem;
+            margin-top: 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            background: #ffd166;
+            color: #0f2027;
+        }
+        button:hover {
+            background: #ffcb52;
+        }
+        .login-error {
+            color: #ff8b94;
+            margin-top: 1rem;
+            min-height: 1.25rem;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.85);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1>Admin Login</h1>
+        <p>Use the same credentials that were previously configured on the Flask app.</p>
+        <form id="loginForm" novalidate>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required autocomplete="username">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+            
+            <button type="submit">Login</button>
+        </form>
+        <div class="login-error" id="loginError" aria-live="polite"></div>
+    </div>
+
+    <script>
+        (function () {
+            const LOGIN_KEY = 'artIntegrationLoggedIn';
+            const USERNAME = 'admin';
+            const PASSWORD = 'Omp@12345';
+            const form = document.getElementById('loginForm');
+            const errorBox = document.getElementById('loginError');
+
+            if (sessionStorage.getItem(LOGIN_KEY) === 'true') {
+                window.location.href = 'admin.html';
+                return;
+            }
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const username = form.username.value.trim();
+                const password = form.password.value;
+
+                if (username === USERNAME && password === PASSWORD) {
+                    sessionStorage.setItem(LOGIN_KEY, 'true');
+                    errorBox.textContent = '';
+                    window.location.href = 'admin.html';
+                } else {
+                    errorBox.textContent = 'Incorrect username or password. Please try again.';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

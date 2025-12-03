@@ -361,4 +361,14 @@ button {
 	font-size: 30px;
 }
 
+.feedback-message {
+	display: none;
+	margin-top: 1rem;
+	font-weight: 600;
+	color: #1b5e20;
+}
+
+.feedback-message.is-visible {
+	display: block;
+}
 
