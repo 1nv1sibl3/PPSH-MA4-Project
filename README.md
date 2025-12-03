@@ -14,7 +14,7 @@ Art Integration - Maharashtra & Sikkim
  - ||TO BE DECIDED||
 
 # Team Info:- 
-[https://ppshinjewadi.me/credits](https://ppshinjewadi.me/credits)
+[https://ppshinjewadi.me/credits](https://ppsh.any-platform.xyz/credits)
 
 # Website Released!!!!!
-# [https://ppshinjewadi.me/](https://ppshinjewadi.me/)
+# [https://ppshinjewadi.me/](https://ppsh.any-platform.xyz/)
